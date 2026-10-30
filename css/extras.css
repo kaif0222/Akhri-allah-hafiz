@@ -48,24 +48,6 @@
 .btn-wa { background: #25D366; border-color: #25D366; color: #fff; }
 .btn-wa:hover { background: #1fb857; border-color: #1fb857; }
 
-/* ---------- Fun strip marquee ---------- */
-.marquee { overflow: hidden; border-block: 1px solid var(--line); background: rgba(0,0,0,.35); padding: 12px 0; }
-.marquee-track { display: flex; width: max-content; animation: marqueeMove 30s linear infinite; }
-.marquee-track span { white-space: nowrap; padding-right: 2.5rem; font-weight: 700; letter-spacing: .04em; color: var(--amber); }
-@keyframes marqueeMove { to { transform: translateX(-50%); } }
-.marquee:hover .marquee-track { animation-play-state: paused; }
-
-/* ---------- Wiggling WhatsApp button ---------- */
-@keyframes waWiggle { 0%, 88%, 100% { transform: rotate(0deg); } 90% { transform: rotate(-4deg); } 92% { transform: rotate(4deg); } 94% { transform: rotate(-2deg); } 96% { transform: rotate(2deg); } }
-.btn-wa { animation: waWiggle 5s ease-in-out infinite; }
-
-/* ---------- Progress plane ---------- */
-.progress::after { content: "✈"; position: absolute; right: -3px; top: 50%; transform: translateY(-50%); font-size: 15px; line-height: 1; filter: drop-shadow(0 0 6px rgba(233,162,59,.9)); }
-
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track, .btn-wa { animation: none; }
-}
-
 /* ---------- Blooper wall ---------- */
 .bp-grid { display: flex; flex-wrap: wrap; gap: 20px; }
 .bp-card { width: min(100%, 340px); background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,.35); transition: transform .3s, border-color .3s, box-shadow .3s; }

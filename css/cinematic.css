@@ -111,13 +111,13 @@ h1 { text-shadow: 0 0 60px rgba(233, 162, 59, .18); }
 .bg-fx { position: fixed; inset: 0; z-index: -2; overflow: hidden; pointer-events: none; }
 .aurora { position: absolute; border-radius: 50%; filter: blur(70px); will-change: transform; }
 .aurora.a1 { width: 62vw; height: 42vw; left: -12vw; top: -12vh;
-  background: radial-gradient(closest-side, rgba(255, 176, 32, .5), transparent);
+  background: radial-gradient(closest-side, rgba(255, 176, 32, .35), transparent);
   animation: driftA 36s ease-in-out infinite alternate; }
 .aurora.a2 { width: 52vw; height: 36vw; right: -10vw; top: 28vh;
-  background: radial-gradient(closest-side, rgba(56, 189, 248, .42), transparent);
+  background: radial-gradient(closest-side, rgba(56, 189, 248, .28), transparent);
   animation: driftB 44s ease-in-out infinite alternate; }
 .aurora.a3 { width: 42vw; height: 30vw; left: 28vw; top: 62vh;
-  background: radial-gradient(closest-side, rgba(168, 85, 247, .42), transparent);
+  background: radial-gradient(closest-side, rgba(168, 85, 247, .30), transparent);
   animation: driftC 52s ease-in-out infinite alternate; }
 @keyframes driftA { from { transform: translate(0, 0) scale(1); } to { transform: translate(6vw, 5vh) scale(1.15); } }
 @keyframes driftB { from { transform: translate(0, 0) scale(1.1); } to { transform: translate(-7vw, -4vh) scale(1); } }

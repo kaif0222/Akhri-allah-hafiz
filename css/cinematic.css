@@ -180,3 +180,10 @@ h1 { text-shadow: 0 0 60px rgba(233, 162, 59, .18); }
   .bg-stars { background-size: 300px 220px; }
   .embers span:nth-child(n+10) { display: none; }
 }
+
+/* ---------- v6: solid Urdu title ----------
+   The gold gradient on .h1-ur (background-clip: text) can break Nastaliq
+   letter-joining on some phones, making correct Urdu look misspelled.
+   Solid gold keeps the look and always shapes correctly. */
+.h1-ur { background: none; -webkit-background-clip: initial; background-clip: initial;
+  -webkit-text-fill-color: var(--amber); color: var(--amber); }

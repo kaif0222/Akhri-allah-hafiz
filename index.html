@@ -131,6 +131,7 @@
     <header class="sec-head"><p class="eyebrow">The team</p><h2>Five students, <em>one film</em></h2>
       <p class="sec-sub">BSCS First Year (2026), Department of Computer Science, Dawood University of Engineering and Technology.</p></header>
     <div class="team-grid" id="teamGrid"></div>
+    <div class="row-nav"><button type="button" class="row-btn" data-row="teamGrid" data-dir="-1" aria-label="Scroll team left">‹</button><button type="button" class="row-btn" data-row="teamGrid" data-dir="1" aria-label="Scroll team right">›</button></div>
   </div>
 </section>
 
@@ -192,6 +193,7 @@
     <header class="sec-head"><p class="eyebrow">Character gallery</p><h2>Faces, voices and <em>emotional arcs</em></h2>
       <p class="sec-sub">Each character has a voice direction and an emotion arc written before a single frame was generated.</p></header>
     <div class="char-grid" id="charGrid"></div>
+    <div class="row-nav"><button type="button" class="row-btn" data-row="charGrid" data-dir="-1" aria-label="Scroll characters left">‹</button><button type="button" class="row-btn" data-row="charGrid" data-dir="1" aria-label="Scroll characters right">›</button></div>
   </div>
 </section>
 
@@ -264,7 +266,7 @@
   <div class="wrap">
     <header class="sec-head"><p class="eyebrow">Take it with you</p><h2>Poster and <em>wallpapers</em></h2>
       <p class="sec-sub">Free to download and share. The poster is the film's share artwork; the wallpapers are frames from the film.</p></header>
-    <div class="dl-grid rv">
+    <div class="dl-grid rv" id="posterRow">
       <article class="dl-card wide">
         <img src="assets/og.jpg" alt="Aakhri Allah Hafiz film poster" loading="lazy">
         <div><h3>Film poster</h3><p>The film's share artwork — made for posting and printing.</p><a class="btn btn-primary" href="assets/og.jpg" download>Download poster</a></div>
@@ -282,6 +284,7 @@
         <div><h3>Wallpaper — Finale</h3><p>A frame from the final scene.</p><a class="btn" href="assets/frames/s12.jpg" download>Download</a></div>
       </article>
     </div>
+    <div class="row-nav"><button type="button" class="row-btn" data-row="posterRow" data-dir="-1" aria-label="Scroll posters left">‹</button><button type="button" class="row-btn" data-row="posterRow" data-dir="1" aria-label="Scroll posters right">›</button></div>
   </div>
 </section>
 

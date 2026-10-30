@@ -48,6 +48,47 @@
 .btn-wa { background: #25D366; border-color: #25D366; color: #fff; }
 .btn-wa:hover { background: #1fb857; border-color: #1fb857; }
 
+/* ---------- v17: horizontal scroll rows (less vertical scrolling) ----------
+   The scenes picker, team, characters and poster/wallpaper cards used to stack
+   vertically (5–7 tall rows on a phone). They now run as swipeable horizontal
+   rows with snap points, so each section is one row tall. Arrow buttons
+   (see .row-nav) cover desktop, where sideways scrolling is less obvious. */
+.tl-bar, .team-grid, .char-grid, .dl-grid {
+  overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: thin;
+  scrollbar-color: rgba(233, 162, 59, .45) transparent; padding-bottom: 10px;
+}
+.tl-bar::-webkit-scrollbar, .team-grid::-webkit-scrollbar,
+.char-grid::-webkit-scrollbar, .dl-grid::-webkit-scrollbar { height: 6px; }
+.tl-bar::-webkit-scrollbar-thumb, .team-grid::-webkit-scrollbar-thumb,
+.char-grid::-webkit-scrollbar-thumb, .dl-grid::-webkit-scrollbar-thumb {
+  background: rgba(233, 162, 59, .45); border-radius: 999px; }
+.tl-seg, .team-grid .member, .char-grid .char, .dl-grid .dl-card { scroll-snap-align: start; }
+
+/* Scenes picker: fixed-width segments so all 12 stay tappable and swipeable. */
+.tl-seg { flex: 0 0 76px; }
+
+/* Team: one row of 5 cards (was 2 rows desktop, 5 stacked rows on phones). */
+.team-grid { display: flex; gap: 20px; }
+.team-grid .member { flex: 0 0 300px; grid-column: auto; }
+.team-grid .member:nth-child(4), .team-grid .member:nth-child(5) { grid-column: auto; }
+.team-grid .member:nth-child(5) { max-width: none; justify-self: auto; }
+
+/* Characters: one row of 7 cards. */
+.char-grid { display: flex; gap: 20px; }
+.char-grid .char { flex: 0 0 280px; }
+
+/* Poster + wallpapers: one row; the poster card stays wider than the rest. */
+.dl-grid { display: flex; gap: 20px; }
+.dl-grid .dl-card { flex: 0 0 280px; }
+.dl-grid .dl-card.wide { flex: 0 0 420px; grid-column: auto; }
+
+/* Row arrow buttons (desktop affordance for the horizontal rows). */
+.row-nav { display: flex; justify-content: flex-end; gap: 8px; margin-top: 4px; }
+.row-btn { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line);
+  background: rgba(244, 234, 216, .06); color: var(--paper); font-size: 22px; line-height: 1;
+  cursor: pointer; transition: background .2s, border-color .2s; }
+.row-btn:hover { background: var(--amber); border-color: var(--amber); color: #1b1208; }
+
 /* ---------- Blooper wall ---------- */
 .bp-grid { display: flex; flex-wrap: wrap; gap: 20px; }
 .bp-card { width: min(100%, 340px); background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,.35); transition: transform .3s, border-color .3s, box-shadow .3s; }

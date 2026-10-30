@@ -264,3 +264,17 @@
     }
   }
 })();
+
+/* ---------- v17: horizontal row arrow buttons ----------
+   Each .row-btn scrolls its target row (team, characters, posters) by most of
+   one screenful, so desktop visitors can move sideways without a touch swipe. */
+(function () {
+  document.querySelectorAll(".row-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var row = document.getElementById(btn.getAttribute("data-row"));
+      if (!row) return;
+      var dir = btn.getAttribute("data-dir") === "-1" ? -1 : 1;
+      row.scrollBy({ left: dir * Math.max(row.clientWidth * 0.8, 280), behavior: "smooth" });
+    });
+  });
+})();

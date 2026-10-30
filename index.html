@@ -339,18 +339,19 @@
 <section id="guestbook" data-tone="grey">
   <div class="wrap">
     <header class="sec-head"><p class="eyebrow">Guestbook</p><h2>Leave a <em>reaction</em></h2>
-      <p class="sec-sub">One line about the film. The site has no server, so reactions are saved in your own browser — each visitor sees their own entries.</p></header>
-    <form class="gb-form rv" id="gbForm">
+      <p class="sec-sub">One line about the film.</p></header>
+    <!-- Guestbook posts silently to Kaif's Google Form (no Google UI shown). -->
+    <form class="gb-form rv" id="gbForm" method="POST" target="gbHidden" action="https://docs.google.com/forms/d/e/1FAIpQLSd_c5Li-gwpURX8L9d87g8tZFWIllWdUaoaUv2zo25xXx_bug/formResponse">
       <label>Your name
-        <input id="gbName" type="text" maxlength="40" placeholder="e.g. Ayesha" required>
+        <input type="text" name="entry.39998457" maxlength="40" placeholder="e.g. Ayesha" required>
       </label>
       <label>Your reaction
-        <textarea id="gbMsg" maxlength="200" rows="2" placeholder="One line — which scene stayed with you?" required></textarea>
+        <textarea name="entry.973991069" maxlength="200" rows="2" placeholder="One line — which scene stayed with you?" required></textarea>
       </label>
       <button class="btn btn-primary" type="submit">Sign the guestbook</button>
     </form>
-    <div class="gb-list" id="gbList"></div>
-    <p class="tiny" id="gbEmpty">No reactions yet — be the first to sign.</p>
+    <p class="tiny" id="gbThanks" hidden>Thank you — your reaction has been received.</p>
+    <iframe name="gbHidden" id="gbHidden" style="display:none" title="Guestbook submission" aria-hidden="true"></iframe>
   </div>
 </section>
 

@@ -241,58 +241,22 @@
     }
   }
 
-  /* ---------- Guestbook (saved in the visitor's own browser) ---------- */
+  /* ---------- Guestbook: site-native form, posts silently to Kaif's Google Form ----------
+     The form targets a hidden iframe, so visitors never leave the page and never see
+     any Google UI. When the iframe finishes loading after a submit, show the thank-you line. */
   var gbForm = document.getElementById("gbForm");
   if (gbForm) {
-    var GB_KEY = "aakhri-guestbook";
-    var gbList = document.getElementById("gbList");
-    var gbEmpty = document.getElementById("gbEmpty");
-    function loadEntries() {
-      try {
-        var raw = localStorage.getItem(GB_KEY);
-        var arr = raw ? JSON.parse(raw) : [];
-        return Array.isArray(arr) ? arr : [];
-      } catch (e) { return []; }
-    }
-    function saveEntries(arr) {
-      try { localStorage.setItem(GB_KEY, JSON.stringify(arr.slice(0, 50))); } catch (e) {}
-    }
-    function renderGuestbook() {
-      var entries = loadEntries();
-      gbList.innerHTML = "";
-      entries.forEach(function (en) {
-        var item = document.createElement("article");
-        item.className = "gb-item";
-        var name = document.createElement("b");
-        name.textContent = en.name;
-        var msg = document.createElement("p");
-        msg.textContent = en.msg;
-        var meta = document.createElement("small");
-        meta.textContent = en.when;
-        item.appendChild(name);
-        item.appendChild(msg);
-        item.appendChild(meta);
-        gbList.appendChild(item);
+    var gbThanks = document.getElementById("gbThanks");
+    var gbHidden = document.getElementById("gbHidden");
+    var gbSubmitted = false;
+    gbForm.addEventListener("submit", function () { gbSubmitted = true; });
+    if (gbHidden) {
+      gbHidden.addEventListener("load", function () {
+        if (!gbSubmitted) return;
+        gbSubmitted = false;
+        gbForm.style.display = "none";
+        if (gbThanks) gbThanks.hidden = false;
       });
-      if (gbEmpty) gbEmpty.style.display = entries.length ? "none" : "";
     }
-    gbForm.addEventListener("submit", function (ev) {
-      ev.preventDefault();
-      var gbNameEl = document.getElementById("gbName");
-      var gbMsgEl = document.getElementById("gbMsg");
-      var name = gbNameEl.value.trim();
-      var msg = gbMsgEl.value.trim();
-      if (!name || !msg) return;
-      var entries = loadEntries();
-      entries.unshift({
-        name: name,
-        msg: msg,
-        when: new Date().toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" })
-      });
-      saveEntries(entries);
-      renderGuestbook();
-      gbForm.reset();
-    });
-    renderGuestbook();
   }
 })();

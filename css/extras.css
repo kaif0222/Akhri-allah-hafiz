@@ -65,3 +65,12 @@
 @media (prefers-reduced-motion: reduce) {
   .marquee-track, .btn-wa { animation: none; }
 }
+
+/* ---------- Blooper wall ---------- */
+.bp-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+.bp-card { width: min(100%, 340px); background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,.35); transition: transform .3s, border-color .3s, box-shadow .3s; }
+.bp-card:hover { transform: translateY(-6px); border-color: var(--ring); box-shadow: 0 28px 60px rgba(0,0,0,.5), 0 0 44px rgba(233,162,59,.1); }
+.bp-card img { width: 100%; height: auto; display: block; }
+.bp-card > div { padding: 18px 20px 20px; }
+.bp-card h3 { margin: 0; }
+.bp-card p { margin: 6px 0 0; color: var(--muted); font-size: 15px; }

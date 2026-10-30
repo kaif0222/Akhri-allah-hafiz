@@ -26,9 +26,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/polish.css">
+<link rel="stylesheet" href="css/cinematic.css">
 </head>
 <body>
 <div class="progress" id="progress" aria-hidden="true"></div>
+<div class="curtain top" aria-hidden="true"></div>
+<div class="curtain bottom" aria-hidden="true"></div>
+<svg class="intro-plane" viewBox="0 0 64 40" aria-hidden="true"><path d="M2 20 L62 2 L40 38 L30 24 Z" fill="#f4ead8"/><path d="M30 24 L62 2 L34 28 Z" fill="#cdbfa6"/><path d="M30 24 L34 36 L40 38 Z" fill="#b9aa8f"/></svg>
 <a class="skip" href="#main">Skip to content</a>
 <div class="sky" aria-hidden="true"></div>
 <div class="grain" aria-hidden="true"></div>
@@ -45,6 +49,7 @@
 
 <!-- HERO -->
 <section class="hero" data-tone="amber">
+  <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <p class="eyebrow">Open-Ended Lab 01 · AICT · DUET</p>
@@ -284,9 +289,17 @@
 </dialog>
 
 <button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
+<button class="sound-toggle" id="soundToggle" type="button" aria-pressed="true" aria-label="Intro sound on">
+  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11 5 6 9H3v6h3l5 4V5z" fill="currentColor" stroke="none"/>
+    <g class="waves"><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a8.5 8.5 0 0 1 0 12"/></g>
+    <line class="slash" x1="3" y1="3" x2="21" y2="21"/>
+  </svg>
+</button>
 
 <script src="js/data.js"></script>
 <script src="js/main.js" defer></script>
 <script src="js/polish.js" defer></script>
+<script src="js/cinematic.js" defer></script>
 </body>
 </html>

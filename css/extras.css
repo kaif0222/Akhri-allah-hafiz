@@ -37,11 +37,6 @@
 .gb-form input, .gb-form textarea { width: 100%; background: rgba(0,0,0,.35); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; color: var(--paper); font: 400 16px/1.5 var(--sans); }
 .gb-form input:focus-visible, .gb-form textarea:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
 .gb-form textarea { resize: vertical; }
-.gb-list { display: grid; gap: 12px; margin: 22px auto 0; max-width: 640px; }
-.gb-item { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
-.gb-item b { color: var(--amber); }
-.gb-item p { margin: 4px 0 0; color: #e6dbc6; }
-.gb-item small { color: var(--muted); }
 #gbEmpty { text-align: center; }
 
 /* ---------- WhatsApp share ---------- */

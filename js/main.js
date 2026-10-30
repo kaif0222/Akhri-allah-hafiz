@@ -63,7 +63,7 @@
     f.loading = "eager";
     filmFrame.appendChild(f); filmLoaded = true;
   }
-  filmFrame.appendChild(posterButton("https://i.ytimg.com/vi/" + D.film.filmId + "/maxresdefault.jpg", "Play the full film · 9 min 40 s", function () { loadFilm(0); },
+  filmFrame.appendChild(posterButton("https://i.ytimg.com/vi/" + D.film.filmId + "/maxresdefault.jpg", "Play the full film · 13 min 37 s", function () { loadFilm(0); },
     ["https://i.ytimg.com/vi/" + D.film.filmId + "/hqdefault.jpg", frame("s12")]));
   $("#ccBtn").addEventListener("click", function () {
     ccOn = !ccOn;
@@ -132,7 +132,7 @@
   var bar = $("#tlBar"), card = $("#tlCard"), lang = "both", curScene = 0;
   D.scenes.forEach(function (s, i) {
     var b = document.createElement("button");
-    b.type = "button"; b.className = "tl-seg tone-" + s.tone; b.style.flex = s.dur + " 1 0";
+    b.type = "button"; b.className = "tl-seg tone-" + s.tone; b.style.flex = s.dur + " 1 76px"; b.style.minWidth = "76px";
     b.setAttribute("role", "tab"); b.setAttribute("aria-selected", i === 0 ? "true" : "false"); b.tabIndex = i === 0 ? 0 : -1;
     b.setAttribute("aria-label", "Scene " + s.n + ": " + s.title + ", " + mmss(s.start) + " to " + mmss(s.end));
     b.textContent = s.n;

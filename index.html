@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/polish.css">
 <link rel="stylesheet" href="css/cinematic.css">
+<link rel="stylesheet" href="css/extras.css">
 </head>
 <body>
 <div class="progress" id="progress" aria-hidden="true"></div>
@@ -62,7 +63,7 @@
 <header class="nav" id="top">
   <a class="brand" href="#top" aria-label="Aakhri Allah Hafiz, home"><span class="brand-ur" lang="ur" dir="rtl">آخری اللہ حافظ</span></a>
   <nav aria-label="Sections">
-    <a href="#film">Film</a><a href="#team">Team</a><a href="#statement">Director</a><a href="#timeline">Timeline</a><a href="#screen">Script to screen</a><a href="#characters">Characters</a><a href="#bts">Behind the scenes</a><a href="#vault">Vault</a><a href="#audio">Audio</a><a href="#rubric">Rubric</a><a href="#contact">Contact</a>
+    <a href="#film">Film</a><a href="#team">Team</a><a href="#statement">Director</a><a href="#timeline">Timeline</a><a href="#screen">Script to screen</a><a href="#characters">Characters</a><a href="#bts">Behind the scenes</a><a href="#vault">Vault</a><a href="#posters">Posters</a><a href="#audio">Audio</a><a href="#rubric">Rubric</a><a href="#game">Game</a><a href="#guestbook">Guestbook</a><a href="#contact">Contact</a>
   </nav>
 </header>
 
@@ -78,7 +79,7 @@
       <p class="h1-sub">The Last Goodbye</p>
       <p class="lede" id="logline"></p>
       <ul class="chips" aria-label="Film facts">
-        <li>9 min 40 s</li><li>12 scenes</li><li>86 shots</li><li>Urdu</li><li>AI-generated</li>
+        <li>13 min 37 s</li><li>12 scenes</li><li>86 shots</li><li>Urdu</li><li>AI-generated</li>
       </ul>
       <div class="cta">
         <a class="btn btn-primary" href="#film">Watch the film</a>
@@ -95,6 +96,19 @@
     </div>
   </div>
   <a class="scroll-cue" href="#film" aria-label="Scroll to the film"><span></span></a>
+</section>
+
+<!-- NUMBERS -->
+<section id="numbers" data-tone="amber">
+  <div class="wrap">
+    <header class="sec-head"><p class="eyebrow">By the numbers</p><h2>The film, <em>counted</em></h2></header>
+    <div class="stats rv" id="stats">
+      <div class="stat"><strong class="stat-num" data-target="12">0</strong><span>Scenes</span></div>
+      <div class="stat"><strong class="stat-num" data-target="86">0</strong><span>Shots</span></div>
+      <div class="stat"><strong class="stat-num" data-target="5">0</strong><span>Student filmmakers</span></div>
+      <div class="stat"><strong>13:37</strong><span>Runtime</span></div>
+    </div>
+  </div>
 </section>
 
 <!-- FILM -->
@@ -134,10 +148,10 @@
 <!-- TIMELINE -->
 <section id="timeline" data-tone="blue">
   <div class="wrap">
-    <header class="sec-head"><p class="eyebrow">Interactive scene timeline</p><h2>Twelve scenes, <em>nine minutes forty</em></h2>
+    <header class="sec-head"><p class="eyebrow">Interactive scene timeline</p><h2>Twelve scenes, <em>13 min 37 s</em></h2>
       <p class="sec-sub">Colour tells the story: amber for childhood, ochre for Karachi, cool blue-white for China, orange for the airport, grey for grief. Select a scene.</p></header>
     <div class="tl-bar" id="tlBar" role="tablist" aria-label="Scenes"></div>
-    <div class="tl-axis" aria-hidden="true"><span>0:00</span><span>3:00</span><span>6:00</span><span>9:40</span></div>
+    <div class="tl-axis" aria-hidden="true"><span>0:00</span><span>4:30</span><span>9:00</span><span>13:37</span></div>
     <article class="tl-card" id="tlCard" aria-live="polite"></article>
   </div>
 </section>
@@ -232,6 +246,32 @@
   </div>
 </section>
 
+<!-- POSTERS -->
+<section id="posters" data-tone="orange">
+  <div class="wrap">
+    <header class="sec-head"><p class="eyebrow">Take it with you</p><h2>Poster and <em>wallpapers</em></h2>
+      <p class="sec-sub">Free to download and share. The poster is the film's share artwork; the wallpapers are frames from the film.</p></header>
+    <div class="dl-grid rv">
+      <article class="dl-card wide">
+        <img src="assets/og.jpg" alt="Aakhri Allah Hafiz film poster" loading="lazy">
+        <div><h3>Film poster</h3><p>The film's share artwork — made for posting and printing.</p><a class="btn btn-primary" href="assets/og.jpg" download>Download poster</a></div>
+      </article>
+      <article class="dl-card">
+        <img src="assets/frames/s01b.jpg" alt="Opening scene frame" loading="lazy">
+        <div><h3>Wallpaper — Opening</h3><p>A frame from the opening scene.</p><a class="btn" href="assets/frames/s01b.jpg" download>Download</a></div>
+      </article>
+      <article class="dl-card">
+        <img src="assets/frames/s05.jpg" alt="Scene five frame" loading="lazy">
+        <div><h3>Wallpaper — Scene 5</h3><p>A frame from the fifth scene.</p><a class="btn" href="assets/frames/s05.jpg" download>Download</a></div>
+      </article>
+      <article class="dl-card">
+        <img src="assets/frames/s12.jpg" alt="Finale frame" loading="lazy">
+        <div><h3>Wallpaper — Finale</h3><p>A frame from the final scene.</p><a class="btn" href="assets/frames/s12.jpg" download>Download</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- AUDIO -->
 <section id="audio" data-tone="grey">
   <div class="wrap">
@@ -279,6 +319,41 @@
   </div>
 </section>
 
+<!-- GAME -->
+<section id="game" data-tone="blue">
+  <div class="wrap">
+    <header class="sec-head"><p class="eyebrow">Play</p><h2>Fly the <em>paper plane</em></h2>
+      <p class="sec-sub">Tap, click, or press Space to flap. Dodge the rooftops, catch the golden stars. How far can the plane fly?</p></header>
+    <div class="game-box rv">
+      <div class="game-hud"><span>Score: <b id="gameScore">0</b></span><span>Best: <b id="gameBest">0</b></span></div>
+      <canvas id="gameCanvas" width="720" height="420" aria-label="Paper plane flying game"></canvas>
+      <div class="game-controls">
+        <button class="btn btn-primary" id="gameStart" type="button">Start flying</button>
+        <p class="tiny" id="gameMsg">Tap, click, or press Space to flap.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUESTBOOK -->
+<section id="guestbook" data-tone="grey">
+  <div class="wrap">
+    <header class="sec-head"><p class="eyebrow">Guestbook</p><h2>Leave a <em>reaction</em></h2>
+      <p class="sec-sub">One line about the film. The site has no server, so reactions are saved in your own browser — each visitor sees their own entries.</p></header>
+    <form class="gb-form rv" id="gbForm">
+      <label>Your name
+        <input id="gbName" type="text" maxlength="40" placeholder="e.g. Ayesha" required>
+      </label>
+      <label>Your reaction
+        <textarea id="gbMsg" maxlength="200" rows="2" placeholder="One line — which scene stayed with you?" required></textarea>
+      </label>
+      <button class="btn btn-primary" type="submit">Sign the guestbook</button>
+    </form>
+    <div class="gb-list" id="gbList"></div>
+    <p class="tiny" id="gbEmpty">No reactions yet — be the first to sign.</p>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" data-tone="night">
   <div class="wrap narrow center">
@@ -322,5 +397,6 @@
 <script src="js/main.js" defer></script>
 <script src="js/polish.js" defer></script>
 <script src="js/cinematic.js" defer></script>
+<script src="js/extras.js" defer></script>
 </body>
 </html>

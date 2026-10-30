@@ -1,0 +1,45 @@
+/* extras.css — stats counters, paper-plane game, poster downloads, guestbook (v9) */
+
+/* ---------- Animated stats ---------- */
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.stat { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 18px; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,.35); }
+.stat strong { display: block; font: 600 clamp(38px, 5vw, 58px)/1 var(--serif); color: var(--amber); }
+.stat span { display: block; margin-top: 8px; color: var(--muted); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+@media (max-width: 900px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ---------- Paper-plane game ---------- */
+.game-box { max-width: 760px; margin-inline: auto; text-align: center; }
+.game-hud { display: flex; justify-content: space-between; margin: 0 auto 12px; font-weight: 700; color: var(--muted); }
+.game-hud b { color: var(--amber); }
+.game-box canvas { width: 100%; height: auto; display: block; border-radius: var(--radius); border: 1px solid var(--line); background: #0b1020; box-shadow: 0 30px 80px rgba(0,0,0,.55); cursor: pointer; }
+.game-controls { margin-top: 16px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+
+/* ---------- Poster / wallpaper downloads ---------- */
+.dl-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.dl-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 20px 50px rgba(0,0,0,.35); transition: transform .3s, border-color .3s, box-shadow .3s; }
+.dl-card:hover { transform: translateY(-6px); border-color: var(--ring); box-shadow: 0 28px 60px rgba(0,0,0,.5), 0 0 44px rgba(233,162,59,.1); }
+.dl-card.wide { grid-column: 1 / -1; flex-direction: row; }
+.dl-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.dl-card.wide img { width: 52%; aspect-ratio: auto; min-height: 240px; }
+.dl-card > div { padding: 20px; display: flex; flex-direction: column; gap: 8px; }
+.dl-card h3 { margin: 0; }
+.dl-card p { margin: 0; color: var(--muted); font-size: 15px; flex: 1; }
+.dl-card .btn { align-self: flex-start; }
+@media (max-width: 900px) {
+  .dl-grid { grid-template-columns: 1fr; }
+  .dl-card.wide { flex-direction: column; }
+  .dl-card.wide img { width: 100%; min-height: 0; }
+}
+
+/* ---------- Guestbook ---------- */
+.gb-form { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; display: grid; gap: 14px; box-shadow: 0 20px 50px rgba(0,0,0,.35); max-width: 640px; margin-inline: auto; }
+.gb-form label { display: grid; gap: 6px; font-weight: 700; font-size: 14px; color: #e6dbc6; }
+.gb-form input, .gb-form textarea { width: 100%; background: rgba(0,0,0,.35); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; color: var(--paper); font: 400 16px/1.5 var(--sans); }
+.gb-form input:focus-visible, .gb-form textarea:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+.gb-form textarea { resize: vertical; }
+.gb-list { display: grid; gap: 12px; margin: 22px auto 0; max-width: 640px; }
+.gb-item { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+.gb-item b { color: var(--amber); }
+.gb-item p { margin: 4px 0 0; color: #e6dbc6; }
+.gb-item small { color: var(--muted); }
+#gbEmpty { text-align: center; }

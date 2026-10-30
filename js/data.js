@@ -9,7 +9,7 @@ window.SITE = {
     subtitle: "The Last Goodbye",
     logline:
       "A hardworking orphan from Karachi wins a scholarship to become a pilot, and is killed at the airport on his return by the uncle who raised him, over a house.",
-    runtime: "9 min 40 s",
+    runtime: "13 min 37 s",
     scenes: 12,
     shots: 86,
     // YouTube video IDs
@@ -346,7 +346,7 @@ window.SITE = {
 
   /* ---------- RUBRIC PROOF ---------- */
   rubric: [
-    { req: "The film", ok: "Full film, 9 min 40 s, 12 scenes, 86 shots, Urdu", where: "#film" },
+    { req: "The film", ok: "Full film, 13 min 37 s, 12 scenes, 86 shots, Urdu", where: "#film" },
     { req: "Trailer with caption", ok: "Trailer embedded with a ready-to-post caption", where: "#audio" },
     { req: "OST with caption", ok: "OST embedded with a ready-to-post caption", where: "#audio" },
     { req: "Portfolio website", ok: "This site, deployed on Vercel", where: "#top" },

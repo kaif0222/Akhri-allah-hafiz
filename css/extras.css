@@ -43,3 +43,7 @@
 .gb-item p { margin: 4px 0 0; color: #e6dbc6; }
 .gb-item small { color: var(--muted); }
 #gbEmpty { text-align: center; }
+
+/* ---------- WhatsApp share ---------- */
+.btn-wa { background: #25D366; border-color: #25D366; color: #fff; }
+.btn-wa:hover { background: #1fb857; border-color: #1fb857; }

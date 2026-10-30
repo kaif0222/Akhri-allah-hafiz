@@ -33,7 +33,7 @@
   background:
     radial-gradient(700px 260px at 20% 30%, rgba(255, 255, 255, .06), transparent 70%),
     radial-gradient(520px 220px at 75% 55%, rgba(255, 255, 255, .05), transparent 70%),
-    linear-gradient(180deg, #060613 0%, #16224e 42%, #3d1650 74%, #9c2a72 100%);
+    linear-gradient(180deg, #060613 0%, #0b0e1a 42%, #12101e 74%, #171020 100%);
   -webkit-mask-image: linear-gradient(180deg, #000 40%, transparent 96%);
   mask-image: linear-gradient(180deg, #000 40%, transparent 96%);
   animation: cloudDrift 70s ease-in-out infinite alternate; }
@@ -102,73 +102,6 @@ h1 { text-shadow: 0 0 60px rgba(233, 162, 59, .18); }
   .intro-plane-real { width: 130px; }
   .intro-trail { width: 30vw; }
   .sound-toggle { left: 14px; bottom: calc(14px + env(safe-area-inset-bottom)); width: 46px; height: 46px; }
-}
-
-/* ---------- v5: special eye-catching page background ----------
-   Fixed layer between the shifting sky gradient (.sky) and the grain:
-   drifting aurora ribbons + a twinkling starfield + golden embers rising.
-   The section colour script underneath keeps working untouched. */
-.bg-fx { position: fixed; inset: 0; z-index: -2; overflow: hidden; pointer-events: none; }
-.aurora { position: absolute; border-radius: 50%; filter: blur(70px); will-change: transform; }
-.aurora.a1 { width: 62vw; height: 42vw; left: -12vw; top: -12vh;
-  background: radial-gradient(closest-side, rgba(255, 176, 32, .35), transparent);
-  animation: driftA 36s ease-in-out infinite alternate; }
-.aurora.a2 { width: 52vw; height: 36vw; right: -10vw; top: 28vh;
-  background: radial-gradient(closest-side, rgba(56, 189, 248, .28), transparent);
-  animation: driftB 44s ease-in-out infinite alternate; }
-.aurora.a3 { width: 42vw; height: 30vw; left: 28vw; top: 62vh;
-  background: radial-gradient(closest-side, rgba(168, 85, 247, .30), transparent);
-  animation: driftC 52s ease-in-out infinite alternate; }
-@keyframes driftA { from { transform: translate(0, 0) scale(1); } to { transform: translate(6vw, 5vh) scale(1.15); } }
-@keyframes driftB { from { transform: translate(0, 0) scale(1.1); } to { transform: translate(-7vw, -4vh) scale(1); } }
-@keyframes driftC { from { transform: translate(0, 0) rotate(0deg); } to { transform: translate(4vw, 6vh) rotate(8deg); } }
-.bg-stars { position: absolute; inset: 0; opacity: .7;
-  background-image:
-    radial-gradient(1.5px 1.5px at 30px 40px, #fff, transparent),
-    radial-gradient(1px 1px at 120px 90px, #ffe9b8, transparent),
-    radial-gradient(2px 2px at 220px 50px, #fff, transparent),
-    radial-gradient(1.5px 1.5px at 310px 160px, #fff, transparent),
-    radial-gradient(1px 1px at 80px 220px, #fff, transparent),
-    radial-gradient(2px 2px at 370px 120px, #ffe9b8, transparent),
-    radial-gradient(1.5px 1.5px at 260px 260px, #fff, transparent),
-    radial-gradient(1px 1px at 400px 200px, #fff, transparent);
-  background-size: 420px 300px;
-  animation: twinkle 5.5s ease-in-out infinite alternate; }
-.embers { position: absolute; inset: 0; }
-.embers span { position: absolute; bottom: -12px; border-radius: 50%; opacity: 0;
-  background: radial-gradient(circle, #ffd98a 0%, rgba(255, 180, 80, .5) 40%, transparent 70%);
-  animation: emberRise linear infinite; }
-.embers span:nth-child(1) { left: 6%; width: 5px; height: 5px; animation-duration: 19s; animation-delay: -2s; }
-.embers span:nth-child(2) { left: 14%; width: 7px; height: 7px; animation-duration: 24s; animation-delay: -11s; }
-.embers span:nth-child(3) { left: 23%; width: 4px; height: 4px; animation-duration: 16s; animation-delay: -7s; }
-.embers span:nth-child(4) { left: 31%; width: 6px; height: 6px; animation-duration: 22s; animation-delay: -15s; }
-.embers span:nth-child(5) { left: 42%; width: 8px; height: 8px; animation-duration: 27s; animation-delay: -4s; }
-.embers span:nth-child(6) { left: 50%; width: 5px; height: 5px; animation-duration: 18s; animation-delay: -19s; }
-.embers span:nth-child(7) { left: 58%; width: 6px; height: 6px; animation-duration: 23s; animation-delay: -9s; }
-.embers span:nth-child(8) { left: 66%; width: 4px; height: 4px; animation-duration: 15s; animation-delay: -13s; }
-.embers span:nth-child(9) { left: 74%; width: 7px; height: 7px; animation-duration: 25s; animation-delay: -1s; }
-.embers span:nth-child(10) { left: 82%; width: 5px; height: 5px; animation-duration: 20s; animation-delay: -17s; }
-.embers span:nth-child(11) { left: 89%; width: 6px; height: 6px; animation-duration: 26s; animation-delay: -6s; }
-.embers span:nth-child(12) { left: 95%; width: 4px; height: 4px; animation-duration: 17s; animation-delay: -21s; }
-.embers span:nth-child(13) { left: 37%; width: 5px; height: 5px; animation-duration: 21s; animation-delay: -23s; }
-.embers span:nth-child(14) { left: 70%; width: 8px; height: 8px; animation-duration: 28s; animation-delay: -25s; }
-@keyframes emberRise {
-  0% { transform: translate(-12px, 0); opacity: 0; }
-  8% { opacity: .9; }
-  50% { transform: translate(18px, -54vh); opacity: .7; }
-  92% { opacity: .4; }
-  100% { transform: translate(-8px, -108vh); opacity: 0; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .bg-fx .aurora, .bg-fx .bg-stars, .bg-fx .embers span { animation: none !important; }
-}
-
-@media (max-width: 900px) {
-  .aurora { filter: blur(50px); }
-  .aurora.a1 { width: 84vw; height: 56vw; }
-  .bg-stars { background-size: 300px 220px; }
-  .embers span:nth-child(n+10) { display: none; }
 }
 
 /* ---------- v6: solid Urdu title ----------

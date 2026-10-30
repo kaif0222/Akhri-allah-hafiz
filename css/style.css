@@ -1,6 +1,6 @@
 /* Aakhri Allah Hafiz – portfolio. Dusk-sky look from the film's colour script. */
 @property --sa { syntax: "<color>"; inherits: true; initial-value: #1a1220; }
-@property --sb { syntax: "<color>"; inherits: true; initial-value: #9c2a72; }
+@property --sb { syntax: "<color>"; inherits: true; initial-value: #1c1226; }
 
 :root {
   --ink: #0e0c14;
@@ -17,15 +17,15 @@
   --serif: "Cormorant Garamond", "Times New Roman", serif;
   --sans: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
   --urdu: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", serif;
-  --sa: #1a1220; --sb: #9c2a72;
+  --sa: #0c0a12; --sb: #1c1226;
   color-scheme: dark;
 }
-body[data-sky="amber"]  { --sa: #1a0a2e; --sb: #9c2a72; }
-body[data-sky="ochre"]  { --sa: #180f04; --sb: #5e3d08; }
-body[data-sky="blue"]   { --sa: #0a1630; --sb: #2563c8; }
-body[data-sky="orange"] { --sa: #1a0a2e; --sb: #9c2a72; }
-body[data-sky="grey"]   { --sa: #120f22; --sb: #4b3a75; }
-body[data-sky="night"]  { --sa: #0d0a1f; --sb: #241a3d; }
+body[data-sky="amber"]  { --sa: #0c0a12; --sb: #1c1226; }
+body[data-sky="ochre"]  { --sa: #0c0a08; --sb: #1d160b; }
+body[data-sky="blue"]   { --sa: #090d16; --sb: #12203a; }
+body[data-sky="orange"] { --sa: #0c0a12; --sb: #1c1226; }
+body[data-sky="grey"]   { --sa: #0c0c10; --sb: #181a20; }
+body[data-sky="night"]  { --sa: #08070c; --sb: #100e18; }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; }

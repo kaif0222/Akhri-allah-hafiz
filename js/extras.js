@@ -50,6 +50,8 @@
       if (bestEl) bestEl.textContent = best;
 
       var state = "idle"; /* idle | playing | over */
+      var funnyLines = ["Crashed! Even paper planes need a chai break.", "Down! The plane will fly again — press Start.", "Rooftop: 1, Plane: 0. Rematch?", "Crashed! No paper planes were harmed."];
+      var overCount = 0;
       var plane, obstacles, stars, frame, score;
 
       var starField = [];
@@ -149,9 +151,10 @@
           ctx.fillStyle = "rgba(244, 234, 216, .95)";
           ctx.font = "600 26px sans-serif";
           ctx.textAlign = "center";
-          ctx.fillText("Game over — score " + score, W / 2, H / 2);
+          ctx.fillText("Game over — score " + score, W / 2, H / 2 - 14);
           ctx.font = "400 16px sans-serif";
-          ctx.fillText("Press Start to fly again", W / 2, H / 2 + 30);
+          ctx.fillText(funnyLines[(overCount - 1) % funnyLines.length], W / 2, H / 2 + 16);
+          ctx.fillText("Press Start to fly again", W / 2, H / 2 + 44);
         }
       }
 
@@ -201,6 +204,7 @@
         }
         if (hit) {
           state = "over";
+          overCount++;
           if (score > best) {
             best = score;
             if (bestEl) bestEl.textContent = best;
